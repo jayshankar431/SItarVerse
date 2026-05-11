@@ -1,0 +1,135 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Student or Teacher profile",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "role": { "type": "string", "enum": ["student", "teacher", "admin"] },
+        "bio": { "type": "string" },
+        "streak": { "type": "integer" },
+        "lastPracticeDate": { "type": "string", "format": "date-time" },
+        "points": { "type": "integer" },
+        "badges": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "Course": {
+      "title": "Course",
+      "description": "Sitar course details",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "level": { "type": "string", "enum": ["Beginner", "Intermediate", "Advanced", "Performance"] },
+        "thumbnail": { "type": "string" },
+        "price": { "type": "number" },
+        "instructorId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "level"]
+    },
+    "Lesson": {
+      "title": "Lesson",
+      "description": "Individual lesson within a course",
+      "type": "object",
+      "properties": {
+        "courseId": { "type": "string" },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "videoUrl": { "type": "string" },
+        "audioUrl": { "type": "string" },
+        "pdfUrl": { "type": "string" },
+        "order": { "type": "integer" },
+        "isPremium": { "type": "boolean" }
+      },
+      "required": ["courseId", "title", "order"]
+    },
+    "Enrollment": {
+      "title": "Enrollment",
+      "description": "Student enrollment in a course",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "courseId": { "type": "string" },
+        "progress": { "type": "number" },
+        "completedLessons": { "type": "array", "items": { "type": "string" } },
+        "bookmarkedLessons": { "type": "array", "items": { "type": "string" } },
+        "enrolledAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "courseId"]
+    },
+    "LiveClass": {
+      "title": "LiveClass",
+      "description": "Scheduled live music session",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "type": { "type": "string", "enum": ["Google Meet", "Zoom"] },
+        "meetingUrl": { "type": "string" },
+        "date": { "type": "string", "format": "date-time" },
+        "duration": { "type": "integer" },
+        "maxStudents": { "type": "integer" },
+        "enrolledStudents": { "type": "array", "items": { "type": "string" } },
+        "teacherId": { "type": "string" }
+      },
+      "required": ["title", "date", "type"]
+    },
+    "Event": {
+      "title": "Event",
+      "description": "Upcoming workshop or concert",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "date": { "type": "string", "format": "date-time" },
+        "location": { "type": "string" },
+        "link": { "type": "string" },
+        "imageUrl": { "type": "string" }
+      },
+      "required": ["title", "date"]
+    },
+    "GalleryItem": {
+      "title": "GalleryItem",
+      "description": "Photos or videos of performances",
+      "type": "object",
+      "properties": {
+        "url": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string", "enum": ["image", "video"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["url", "type"]
+    },
+    "Testimonial": {
+      "title": "Testimonial",
+      "description": "Student feedback",
+      "type": "object",
+      "properties": {
+        "author": { "type": "string" },
+        "role": { "type": "string" },
+        "text": { "type": "string" },
+        "rating": { "type": "integer" },
+        "avatarUrl": { "type": "string" }
+      },
+      "required": ["author", "text", "rating"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": { "schema": "User", "description": "User profiles" },
+    "courses/{courseId}": { "schema": "Course", "description": "Available courses" },
+    "courses/{courseId}/lessons/{lessonId}": { "schema": "Lesson", "description": "Course lessons" },
+    "enrollments/{enrollmentId}": { "schema": "Enrollment", "description": "Student enrollments" },
+    "classes/{classId}": { "schema": "LiveClass", "description": "Live class sessions" },
+    "events/{eventId}": { "schema": "Event", "description": "Upcoming events" },
+    "gallery/{itemId}": { "schema": "GalleryItem", "description": "Gallery items" },
+    "testimonials/{testimonialId}": { "schema": "Testimonial", "description": "Student reviews" }
+  }
+}
