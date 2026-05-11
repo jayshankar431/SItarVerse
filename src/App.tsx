@@ -117,17 +117,26 @@ export default function App() {
         href="https://wa.me/919872312430?text=Hello%20Sir"
         target="_blank"
         rel="noopener noreferrer"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        whileHover={{ scale: 1.1 }}
+        initial={{ scale: 0, opacity: 0, y: 20 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        whileHover={{ scale: 1.1, rotate: [0, -10, 10, -10, 0] }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[200] bg-[#25D366] text-white p-4 md:p-5 rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.4)] flex items-center justify-center active:scale-95 transition-transform"
+        transition={{ 
+          type: "spring", 
+          stiffness: 260, 
+          damping: 20 
+        }}
+        className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[200] bg-[#25D366] text-white p-4 md:p-5 rounded-full shadow-[0_10px_40px_rgba(37,211,102,0.5)] flex items-center justify-center whatsapp-pulse"
       >
-        <MessageCircle className="w-6 h-6 md:w-7 md:h-7" />
-        <span className="absolute -top-1 -right-1 flex h-4 w-4">
+        <MessageCircle className="w-6 h-6 md:w-8 md:h-8 fill-current" />
+        <motion.span 
+          animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="absolute -top-1 -right-1 flex h-5 w-5"
+        >
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-4 w-4 bg-white opacity-20"></span>
-        </span>
+          <span className="relative inline-flex rounded-full h-5 w-5 bg-white/20"></span>
+        </motion.span>
       </motion.a>
 
       {/* Floating Particle Background Effect */}

@@ -72,7 +72,7 @@ export const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, ...springTransition }}
-                className="text-5xl font-serif font-bold mb-6 text-foreground italic"
+                className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 text-foreground italic leading-[1.1] tracking-tight"
               >
                 A Legacy of Divine Strings
               </motion.h2>

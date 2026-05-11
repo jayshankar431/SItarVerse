@@ -121,9 +121,9 @@ export const Courses = () => {
                    <span className="relative z-10 drop-shadow-lg">{idx === 0 ? '🎼' : idx === 1 ? '🎻' : '🎵'}</span>
                 </motion.div>
                 <div className="flex-1 min-w-0">
-                  <div className="flex justify-between items-start gap-2 mb-2">
-                    <h5 className="text-xl md:text-2xl font-bold text-foreground font-serif italic truncate">{course.title}</h5>
-                    <Badge className="bg-gold/10 text-gold text-[7px] md:text-[8px] border-gold/20 uppercase tracking-[0.25em] font-bold px-3 py-1 rounded-full">
+                  <div className="flex flex-col sm:flex-row justify-between items-start gap-2 mb-2">
+                    <h5 className="text-xl md:text-2xl font-bold text-foreground font-serif italic leading-tight">{course.title}</h5>
+                    <Badge className="bg-gold/10 text-gold text-[7px] md:text-[8px] border-gold/20 uppercase tracking-[0.25em] font-bold px-3 py-1 rounded-full whitespace-nowrap">
                       {course.level}
                     </Badge>
                   </div>
@@ -135,7 +135,7 @@ export const Courses = () => {
                       className="bg-gradient-to-r from-gold to-gold-light h-full rounded-full shadow-[0_0_15px_rgba(197,160,89,0.4)]"
                     />
                   </div>
-                  <p className="text-[9px] md:text-[10px] text-gold/40 uppercase tracking-[0.25em] font-bold whitespace-nowrap">
+                  <p className="text-[9px] md:text-[10px] text-gold/40 uppercase tracking-[0.25em] font-bold">
                     {idx === 0 ? '12/16 Lessons Completed' : idx === 1 ? '2/8 Lessons Completed' : 'Enrollment Open'}
                   </p>
                 </div>

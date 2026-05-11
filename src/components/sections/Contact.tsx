@@ -56,19 +56,19 @@ export const Contact = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 mb-12">
               <motion.a 
-                href="mailto:info@sitarverse.com"
+                href="mailto:sangeetkumar20april@gmail.com"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, ...springTransition }}
                 whileHover={{ x: 12, backgroundColor: "var(--gold-5)" }}
                 className="flex items-center gap-6 p-6 bg-card border border-border rounded-3xl hover:border-gold/30 transition-all group shadow-xl"
               >
-                <div className="w-14 h-14 bg-background rounded-2xl flex items-center justify-center text-gold group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(197,160,89,0.3)] transition-all border border-border">
+                <div className="w-14 h-14 bg-background rounded-2xl flex items-center justify-center text-gold group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(197,160,89,0.3)] transition-all border border-border shrink-0">
                   <Mail className="w-6 h-6" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-gold font-bold text-[10px] uppercase tracking-[0.2em] mb-1">Email Inquiry</p>
-                  <p className="text-lg text-foreground font-serif italic">info@sitarverse.com</p>
+                  <p className="text-base md:text-lg text-foreground font-serif italic break-words">sangeetkumar20april@gmail.com</p>
                 </div>
               </motion.a>
 
@@ -144,7 +144,14 @@ export const Contact = () => {
                 <Label htmlFor="contact-message" className="text-gold/60 uppercase text-[9px] tracking-[0.3em] font-bold ml-1">Your Message</Label>
                 <Textarea id="contact-message" placeholder="I would like to enquire about..." className="bg-foreground/5 border-border text-foreground min-h-[160px] rounded-2xl p-6 focus:border-gold/50 transition-all font-light resize-none placeholder:text-foreground/20" />
               </motion.div>
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={bouncySpring}>
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                whileHover={{ scale: 1.02 }} 
+                whileTap={{ scale: 0.98 }} 
+                transition={{ ...bouncySpring, delay: 0.8 }}
+                className="space-y-2"
+              >
                 <Button className="w-full bg-gold text-luxury-black hover:bg-gold-light transition-all h-16 rounded-2xl font-bold uppercase tracking-[0.3em] text-[11px] shadow-xl shadow-gold/10 flex items-center justify-center gap-3">
                   Send Message <Send className="w-4 h-4" />
                 </Button>

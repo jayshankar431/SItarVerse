@@ -60,7 +60,7 @@ export const Testimonials = () => {
           {testimonials.map((t, idx) => (
             <motion.div
               key={t.id}
-              initial={{ opacity: 0, x: idx % 2 === 0 ? -20 : 20, opacity: 0 }}
+              initial={{ opacity: 0, x: idx % 2 === 0 ? -20 : 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: idx * 0.1, duration: 0.8 }}
               viewport={{ once: true }}
@@ -78,9 +78,9 @@ export const Testimonials = () => {
                     </p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <Avatar className="w-12 h-12 border border-gold/30 shadow-lg">
-                      <AvatarImage src={t.avatar} />
-                      <AvatarFallback className="bg-background text-gold">
+                    <Avatar className="w-12 h-12 border border-gold/30 shadow-[0_0_15px_rgba(197,160,89,0.3)] ring-2 ring-gold/10">
+                      <AvatarImage src={t.avatar} className="object-cover" />
+                      <AvatarFallback className="bg-background text-gold font-bold">
                         {t.author[0]}
                       </AvatarFallback>
                     </Avatar>

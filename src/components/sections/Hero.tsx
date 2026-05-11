@@ -52,10 +52,9 @@ export const Hero = ({ onStartLearning }: HeroProps) => {
           {/* Maestro Main Profile Image */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={springTransition}
-            animate={{
-              y: [0, -15, 0],
+            animate={{ 
+              opacity: 1, 
+              y: [0, -15, 0] 
             }}
             transition={{
               y: {
@@ -63,7 +62,11 @@ export const Hero = ({ onStartLearning }: HeroProps) => {
                 repeat: Infinity,
                 ease: "easeInOut",
               },
-              opacity: { duration: 1, delay: 0.2 },
+              opacity: { 
+                duration: 1, 
+                delay: 0.2 
+              },
+              scale: bouncySpring
             }}
             className="relative inline-block mb-10 group"
           >
@@ -102,9 +105,9 @@ export const Hero = ({ onStartLearning }: HeroProps) => {
             initial={{ opacity: 0, scale: 0.9, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ ...springTransition, delay: 0.5 }}
-            className="text-fluid-h1 font-serif font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-b from-gold via-gold-light to-gold drop-shadow-2xl leading-[1.1]"
+            className="text-fluid-h1 font-serif font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-b from-gold via-gold-light to-gold drop-shadow-2xl leading-[1.05] tracking-tight text-center lg:text-left"
           >
-            Master the Divine<br className="hidden md:block" /> Strings of Sitar
+            Master the Divine<br />Strings of Sitar
           </motion.h1>
           
           <motion.div 

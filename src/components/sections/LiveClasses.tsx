@@ -51,9 +51,9 @@ export const LiveClasses = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, ...springTransition }}
-                className="text-fluid-h2 font-serif font-bold text-gold cursor-default leading-tight"
+                className="text-fluid-h2 font-serif font-bold text-gold cursor-default leading-tight tracking-tight px-1 md:px-0"
               >
-                Mastery Through<br className="hidden sm:block" /> Real-time Guidance
+                Mastery Through<br /> Real-time Guidance
               </motion.h2>
               <motion.p 
                 initial={{ opacity: 0 }}
@@ -81,8 +81,8 @@ export const LiveClasses = () => {
                     <p className="text-gold text-[10px] font-bold uppercase tracking-[0.3em]">Today at 6:00 PM IST</p>
                   </motion.div>
                   <div>
-                    <h4 className="text-3xl md:text-4xl font-serif text-foreground mb-2 italic tracking-tight">Advanced Meend Technique</h4>
-                    <p className="text-sm text-foreground/40 max-w-sm">Master the divine slides of the HP Sitar heritage with Dr. Ashok Kumar Chambyal</p>
+                    <h4 className="text-2xl md:text-4xl font-serif text-foreground mb-2 italic tracking-tight leading-snug">Advanced Meend Technique</h4>
+                    <p className="text-sm text-foreground/40 max-w-sm leading-relaxed">Master the divine slides of the HP Sitar heritage with Dr. Ashok Kumar Chambyal</p>
                   </div>
                 </div>
                 <motion.div 

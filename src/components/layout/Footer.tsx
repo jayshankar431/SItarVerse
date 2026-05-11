@@ -109,9 +109,9 @@ export const Footer = () => {
             >
               <h4 className="text-gold font-serif font-bold mb-8 uppercase text-xs tracking-[0.3em] italic">Get in Touch</h4>
               <div className="space-y-4">
-                <p className="text-foreground/50 text-sm italic font-light">Mandi-Kullu Highway,<br />Himachal Pradesh, India</p>
+                <p className="text-foreground/50 text-sm italic font-light leading-relaxed">Mandi-Kullu Highway,<br />Himachal Pradesh, India</p>
                 <div className="space-y-1">
-                  <p className="text-foreground font-bold text-xl font-serif">info@sitarverse.com</p>
+                  <p className="text-foreground font-bold text-lg md:text-xl font-serif break-words">sangeetkumar20april@gmail.com</p>
                   <p className="text-foreground/60 font-serif tracking-[0.1em]">+91 98723 12430</p>
                 </div>
                 <motion.div 
@@ -119,7 +119,7 @@ export const Footer = () => {
                   className="bg-gold/10 border border-gold/20 p-4 rounded-2xl"
                 >
                   <p className="text-[10px] text-gold uppercase tracking-[0.2em] font-bold mb-1">State Cultural Award 2023</p>
-                  <p className="text-xs text-foreground/60 font-medium">Preserved by Dr. Ashok Kumar Chambyal</p>
+                  <p className="text-xs text-foreground/60 font-medium leading-tight">Preserved by Dr. Ashok Kumar Chambyal</p>
                 </motion.div>
               </div>
             </motion.div>

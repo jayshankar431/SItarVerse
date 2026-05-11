@@ -1,18 +1,18 @@
 export const springTransition = {
-  type: "spring",
+  type: "spring" as const,
   stiffness: 260,
   damping: 20
 };
 
 export const softSpring = {
-  type: "spring",
+  type: "spring" as const,
   stiffness: 100,
   damping: 15,
   mass: 1
 };
 
 export const bouncySpring = {
-  type: "spring",
+  type: "spring" as const,
   stiffness: 400,
   damping: 10
 };

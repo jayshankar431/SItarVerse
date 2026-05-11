@@ -47,7 +47,7 @@ export const AIRiyaz = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={springTransition}
-            className="text-fluid-h2 font-serif font-bold text-foreground mb-4"
+            className="text-fluid-h2 font-serif font-bold text-foreground mb-4 tracking-tight leading-tight px-4"
           >
             AI Riyaz Assistant
           </motion.h2>

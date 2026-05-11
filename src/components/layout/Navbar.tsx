@@ -68,7 +68,7 @@ export const Navbar = ({ onDashboardClick, user, isDarkMode, toggleTheme }: Navb
           >
             <Music className="text-luxury-black dark:text-luxury-black w-6 h-6" />
           </motion.div>
-          <span className="text-xl md:text-2xl font-serif tracking-tight font-bold bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent">
+          <span className="text-xl md:text-2xl font-serif tracking-tight font-bold bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent whitespace-nowrap">
             SitarVerse
           </span>
         </motion.div>
