@@ -42,6 +42,7 @@ export const LiveClasses = () => {
               <motion.span 
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
                 className="text-gold font-serif italic text-xl mb-4 block"
               >
@@ -50,6 +51,7 @@ export const LiveClasses = () => {
               <motion.h2 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: 0.3, ...springTransition }}
                 className="text-fluid-h2 font-serif font-bold text-gold cursor-default leading-tight tracking-tight px-1 md:px-0"
               >
@@ -58,6 +60,7 @@ export const LiveClasses = () => {
               <motion.p 
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
                 className="text-foreground/50 text-lg font-light leading-relaxed max-w-lg italic px-1 md:px-0"
               >

@@ -32,6 +32,7 @@ export const Contact = () => {
             <motion.span 
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: 0.2 }}
               className="text-gold font-serif italic text-xl mb-4 block"
             >
@@ -40,6 +41,7 @@ export const Contact = () => {
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: 0.3, ...springTransition }}
               className="text-fluid-h2 font-serif font-bold text-foreground mb-8 leading-tight italic"
             >
@@ -48,6 +50,7 @@ export const Contact = () => {
             <motion.p 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
               transition={{ delay: 0.4 }}
               className="text-foreground/50 text-lg mb-12 font-light max-w-lg italic"
             >
@@ -59,6 +62,7 @@ export const Contact = () => {
                 href="mailto:sangeetkumar20april@gmail.com"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: 0.5, ...springTransition }}
                 whileHover={{ x: 12, backgroundColor: "var(--gold-5)" }}
                 className="flex items-center gap-6 p-6 bg-card border border-border rounded-3xl hover:border-gold/30 transition-all group shadow-xl"
@@ -76,6 +80,7 @@ export const Contact = () => {
                 href="tel:+919872312430"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: 0.6, ...springTransition }}
                 whileHover={{ x: 12, backgroundColor: "var(--gold-5)" }}
                 className="flex items-center gap-6 p-6 bg-card border border-border rounded-3xl hover:border-gold/30 transition-all group shadow-xl"
@@ -99,6 +104,7 @@ export const Contact = () => {
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
                   transition={{ delay: 0.7 + i * 0.1, ...bouncySpring }}
                   whileHover={{ 
                     y: -10, 
@@ -127,26 +133,27 @@ export const Contact = () => {
             
             <form className="space-y-6 relative z-10">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="space-y-2">
+                <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="space-y-2">
                   <Label htmlFor="firstName" className="text-gold/60 uppercase text-[9px] tracking-[0.3em] font-bold ml-1">First Name</Label>
                   <Input id="firstName" placeholder="Arjun" className="bg-foreground/5 border-border text-foreground h-14 rounded-2xl px-6 focus:border-gold/50 transition-all font-light placeholder:text-foreground/20" />
                 </motion.div>
-                <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="space-y-2">
+                <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }} className="space-y-2">
                   <Label htmlFor="lastName" className="text-gold/60 uppercase text-[9px] tracking-[0.3em] font-bold ml-1">Last Name</Label>
                   <Input id="lastName" placeholder="Sharma" className="bg-foreground/5 border-border text-foreground h-14 rounded-2xl px-6 focus:border-gold/50 transition-all font-light placeholder:text-foreground/20" />
                 </motion.div>
               </div>
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="space-y-2">
+              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.6 }} className="space-y-2">
                 <Label htmlFor="c-email" className="text-gold/60 uppercase text-[9px] tracking-[0.3em] font-bold ml-1">Email Address</Label>
                 <Input id="c-email" type="email" placeholder="arjun@email.com" className="bg-foreground/5 border-border text-foreground h-14 rounded-2xl px-6 focus:border-gold/50 transition-all font-light placeholder:text-foreground/20" />
               </motion.div>
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="space-y-2">
+              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.7 }} className="space-y-2">
                 <Label htmlFor="contact-message" className="text-gold/60 uppercase text-[9px] tracking-[0.3em] font-bold ml-1">Your Message</Label>
                 <Textarea id="contact-message" placeholder="I would like to enquire about..." className="bg-foreground/5 border-border text-foreground min-h-[160px] rounded-2xl p-6 focus:border-gold/50 transition-all font-light resize-none placeholder:text-foreground/20" />
               </motion.div>
               <motion.div 
                 initial={{ opacity: 0, y: 10 }} 
                 whileInView={{ opacity: 1, y: 0 }} 
+                viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }} 
                 whileTap={{ scale: 0.98 }} 
                 transition={{ ...bouncySpring, delay: 0.8 }}

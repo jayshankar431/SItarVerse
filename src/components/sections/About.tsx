@@ -43,6 +43,7 @@ export const About = () => {
             <motion.div 
               initial={{ rotate: -10, scale: 0 }}
               whileInView={{ rotate: 12, scale: 1 }}
+              viewport={{ once: true }}
               transition={{ delay: 0.5, ...springTransition }}
               whileHover={{ scale: 1.1, rotate: 15 }}
               className="absolute -bottom-4 -right-4 bg-gold text-luxury-black px-8 py-4 rounded-3xl shadow-2xl font-serif italic font-bold text-xl hidden md:block border-2 border-white/20 z-10"
@@ -63,6 +64,7 @@ export const About = () => {
               <motion.span 
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
                 className="text-gold font-serif italic text-xl mb-4 block"
               >
@@ -71,6 +73,7 @@ export const About = () => {
               <motion.h2 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: 0.3, ...springTransition }}
                 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 text-foreground italic leading-[1.1] tracking-tight"
               >
@@ -79,6 +82,7 @@ export const About = () => {
               <motion.p 
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
                 className="text-foreground/70 text-lg leading-relaxed font-light italic"
               >
@@ -94,6 +98,7 @@ export const About = () => {
                   key={idx}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 + 0.5, ...softSpring }}
                   whileHover={{ y: -8, scale: 1.02, backgroundColor: "var(--gold-5)" }}
                   className="p-6 rounded-3xl bg-secondary border border-border group hover:border-gold/30 hover:bg-gold/5 transition-all shadow-xl"

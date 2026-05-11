@@ -37,6 +37,7 @@ export const AIRiyaz = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.8, y: 10 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={springTransition}
             whileHover={{ scale: 1.1, rotate: [-1, 1, -1] }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold font-accent text-xs uppercase tracking-widest mb-6 cursor-pointer"
@@ -46,6 +47,7 @@ export const AIRiyaz = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={springTransition}
             className="text-fluid-h2 font-serif font-bold text-foreground mb-4 tracking-tight leading-tight px-4"
           >
@@ -54,6 +56,7 @@ export const AIRiyaz = () => {
           <motion.p 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.3 }}
             className="text-foreground/50 max-w-xl mx-auto font-light italic"
           >
@@ -66,6 +69,7 @@ export const AIRiyaz = () => {
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={springTransition}
             whileHover={{ y: -5 }}
             className="bg-card/40 backdrop-blur-md border border-border rounded-[2.5rem] p-8 flex flex-col group hover:border-gold/30 transition-all duration-500 shadow-2xl"
@@ -111,6 +115,7 @@ export const AIRiyaz = () => {
                     key={item.label} 
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
                     transition={{ delay: idx * 0.1 + 0.5, ...bouncySpring }}
                     whileHover={{ scale: 1.05, backgroundColor: "var(--gold-5)" }}
                     className="bg-foreground/5 p-4 rounded-2xl text-center border border-border group-hover:border-gold/20 transition-colors"

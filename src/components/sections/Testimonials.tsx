@@ -43,6 +43,7 @@ export const Testimonials = () => {
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             className="text-gold font-accent uppercase text-sm tracking-widest mb-4 block font-bold"
           >
             Hearts & Strings
@@ -50,6 +51,7 @@ export const Testimonials = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-fluid-h2 font-serif font-bold mb-4 text-foreground italic"
           >
             Student Testimonials

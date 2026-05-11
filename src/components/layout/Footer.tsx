@@ -45,6 +45,7 @@ export const Footer = () => {
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
                   transition={{ delay: i * 0.1, ...bouncySpring }}
                   whileHover={{ 
                     y: -8, 
@@ -130,6 +131,7 @@ export const Footer = () => {
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.5 }}
           className="h-16 flex flex-col md:flex-row items-center justify-between border-t border-border pt-8 text-[10px] text-foreground/30 tracking-[0.25em] uppercase font-bold"
         >

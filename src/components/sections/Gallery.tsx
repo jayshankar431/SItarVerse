@@ -20,6 +20,7 @@ export const Gallery = () => {
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-gold font-accent uppercase text-sm tracking-widest mb-4 block"
           >
             Visual Journey
@@ -27,6 +28,7 @@ export const Gallery = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={springTransition}
             className="text-fluid-h2 font-serif font-bold mb-4 text-foreground cursor-default italic"
           >
@@ -35,6 +37,7 @@ export const Gallery = () => {
           <motion.p 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.3 }}
             className="text-foreground/50 max-w-2xl mx-auto italic font-light"
           >

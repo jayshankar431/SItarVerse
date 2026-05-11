@@ -81,6 +81,7 @@ export const Courses = () => {
           <motion.p 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.3 }}
             className="text-foreground/50 max-w-xl mx-auto font-light text-sm md:text-base italic"
           >
@@ -131,6 +132,7 @@ export const Courses = () => {
                     <motion.div 
                       initial={{ width: 0 }}
                       whileInView={{ width: idx === 0 ? '75%' : idx === 1 ? '25%' : '5%' }}
+                      viewport={{ once: true }}
                       transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
                       className="bg-gradient-to-r from-gold to-gold-light h-full rounded-full shadow-[0_0_15px_rgba(197,160,89,0.4)]"
                     />

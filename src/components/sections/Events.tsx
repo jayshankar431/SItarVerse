@@ -35,6 +35,7 @@ export const Events = () => {
             <motion.span
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               className="text-gold font-accent uppercase text-sm tracking-widest mb-4 block font-bold"
             >
               Upcoming Engagements
@@ -42,6 +43,7 @@ export const Events = () => {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={springTransition}
               className="text-fluid-h2 font-serif font-bold text-foreground italic"
             >
